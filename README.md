@@ -23,7 +23,7 @@ Estructura
 - `src/styles.css`: estilos y tema.
 - `src/app.js`: lógica de catálogo, filtros y carrito.
 - `src/products.json`: datos de ejemplo.
-- `assets/logo.svg`: logo y favicon.
+- `assets/noemia-logo.png`: coloca aquí tu logo (favicon y header lo usan).
 
 Personalización
 ---------------

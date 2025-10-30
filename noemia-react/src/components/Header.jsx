@@ -7,7 +7,10 @@ export default function Header({ query, onQuery }) {
   return (
     <header className="sticky top-0 z-40 backdrop-blur bg-bg/70 border-b border-border">
       <div className="container flex items-center gap-3 py-3">
-        <a className="font-extrabold tracking-wide lowercase" href="#">noemia</a>
+        <a className="flex items-center gap-2" href="#" aria-label="Noemia">
+          <img src="/logo-noemia.png" alt="Noemia" className="w-8 h-8 rounded-full object-cover" onError={(e)=>{ e.currentTarget.style.display='none'; }} />
+          <span className="font-extrabold tracking-wide lowercase">noemia</span>
+        </a>
         <div className="ml-auto flex items-center gap-2">
           <input value={query} onChange={e => onQuery(e.target.value)} placeholder="Buscar productos, marcas y más" className="w-[56vw] max-w-[560px] bg-panel border border-border rounded-lg px-3 py-2" />
           <button className="btn btn-primary">Buscar</button>
