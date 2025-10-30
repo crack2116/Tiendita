@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#f7f8fb',
+        bg: '#f3f6f5',
         panel: '#ffffff',
-        border: '#e5e7eb',
-        brand: '#60a5fa',
-        brand2: '#a78bfa'
+        border: '#e6e8ee',
+        brand: '#22c55e',
+        brand2: '#60a5fa'
       }
     }
   },
