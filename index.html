@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Noemia — Tu tienda de todo</title>
+    <meta name="description" content="Noemia: tienda online moderna para comprar todo tipo de productos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="/">
+          <img src="assets/logo.svg" alt="Noemia" class="brand__logo" />
+          <span class="brand__name">noemia</span>
+        </a>
+        <div class="search">
+          <input id="searchInput" class="search__input" type="search" placeholder="Buscar productos, marcas y más" aria-label="Buscar" />
+          <button id="searchBtn" class="btn btn--primary">Buscar</button>
+        </div>
+        <nav class="nav">
+          <button id="openCartBtn" class="icon-btn" aria-label="Abrir carrito" title="Carrito">
+            <span class="icon">🛒</span>
+            <span id="cartCount" class="badge">0</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1>Todo para tu día a día, en un solo lugar</h1>
+          <p>Explora miles de productos con ofertas dinámicas, envío rápido y una experiencia de compra cuidada al detalle.</p>
+          <div class="hero__cta">
+            <a href="#catalogo" class="btn btn--primary">Ver catálogo</a>
+            <a href="#categorias" class="btn btn--ghost">Categorías</a>
+          </div>
+        </div>
+        <div class="hero__art"></div>
+      </div>
+    </section>
+
+    <section id="categorias" class="categories container">
+      <h2 class="section-title">Categorías populares</h2>
+      <div id="categoryChips" class="chips"></div>
+    </section>
+
+    <section id="catalogo" class="catalog container">
+      <div class="catalog__toolbar">
+        <div class="filters">
+          <select id="sortSelect" class="select">
+            <option value="featured">Destacados</option>
+            <option value="price_asc">Precio: bajo a alto</option>
+            <option value="price_desc">Precio: alto a bajo</option>
+            <option value="rating_desc">Mejor calificados</option>
+            <option value="newest">Novedades</option>
+          </select>
+        </div>
+        <div class="results-count">
+          <span id="resultsCount">0</span> resultados
+        </div>
+      </div>
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand brand--light" href="/">
+            <img src="assets/logo.svg" alt="Noemia" class="brand__logo" />
+            <span class="brand__name">noemia</span>
+          </a>
+          <p>Hecho con ❤️ en tu ciudad. © <span id="year"></span> Noemia.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#" class="link">Términos</a>
+          <a href="#" class="link">Privacidad</a>
+          <a href="#" class="link">Ayuda</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <aside id="cartDrawer" class="drawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__header">
+          <h3>Tu carrito</h3>
+          <button id="closeCartBtn" class="icon-btn" aria-label="Cerrar">✕</button>
+        </div>
+        <div id="cartItems" class="drawer__body"></div>
+        <div class="drawer__footer">
+          <div class="drawer__summary">
+            <span>Total</span>
+            <strong id="cartTotal">S/ 0.00</strong>
+          </div>
+          <button id="checkoutBtn" class="btn btn--primary btn--block">Proceder al pago</button>
+        </div>
+      </div>
+      <div class="drawer__backdrop" id="cartBackdrop" tabindex="-1" aria-hidden="true"></div>
+    </aside>
+
+    <!-- Quick View Modal -->
+    <dialog id="quickView" class="modal">
+      <div class="modal__content">
+        <button id="closeQuickView" class="icon-btn modal__close" aria-label="Cerrar">✕</button>
+        <div class="modal__grid">
+          <img id="qvImage" alt="Producto" class="modal__image" />
+          <div class="modal__info">
+            <h3 id="qvTitle"></h3>
+            <div class="price">
+              <span id="qvPrice" class="price__current"></span>
+              <span id="qvOldPrice" class="price__old"></span>
+            </div>
+            <p id="qvDesc" class="muted"></p>
+            <div class="modal__actions">
+              <button id="qvAdd" class="btn btn--primary">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+  </html>
+
+

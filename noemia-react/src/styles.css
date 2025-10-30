@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grad: linear-gradient(90deg, theme(colors.brand), theme(colors.brand2));
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-bg text-white; background-image:
+  radial-gradient(1200px 600px at 10% -10%, rgba(124,77,255,.12), transparent 50%),
+  radial-gradient(1000px 500px at 90% -20%, rgba(34,211,238,.10), transparent 50%);
+}
+
+.btn { @apply font-semibold rounded-lg px-4 py-2; }
+.btn-primary { background-image: var(--grad); color: #0b0d10; }
+.btn-ghost { @apply border border-border bg-panel text-white; }
+
+.container { @apply max-w-6xl mx-auto px-4; }
+
+
