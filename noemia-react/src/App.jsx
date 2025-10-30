@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import Header from './components/Header.jsx';
+import TopNav from './components/TopNav.jsx';
 import Hero from './components/Hero.jsx';
 import CategoryChips from './components/CategoryChips.jsx';
 import ProductGrid from './components/ProductGrid.jsx';
@@ -32,6 +33,7 @@ export default function App() {
   return (
     <>
       <Header query={query} onQuery={setQuery} />
+      <TopNav />
       <main>
         <Hero />
         <section className="container py-6">

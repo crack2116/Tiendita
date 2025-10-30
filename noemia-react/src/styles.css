@@ -8,8 +8,8 @@
 
 html, body, #root { height: 100%; }
 body { @apply bg-bg text-white; background-image:
-  radial-gradient(1200px 600px at 10% -10%, rgba(16,185,129,.12), transparent 50%),
-  radial-gradient(1000px 500px at 90% -20%, rgba(56,189,248,.10), transparent 50%);
+  radial-gradient(1200px 600px at 10% -10%, rgba(249,115,22,.12), transparent 50%),
+  radial-gradient(1000px 500px at 90% -20%, rgba(245,158,11,.10), transparent 50%);
 }
 
 .btn { @apply font-semibold rounded-lg px-4 py-2; }

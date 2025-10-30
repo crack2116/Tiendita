@@ -7,8 +7,8 @@ export default {
         bg: '#0b0d10',
         panel: '#0f1318',
         border: '#1f2430',
-        brand: '#10b981',
-        brand2: '#38bdf8'
+        brand: '#f97316',
+        brand2: '#f59e0b'
       }
     }
   },
