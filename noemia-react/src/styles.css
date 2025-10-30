@@ -7,14 +7,14 @@
 }
 
 html, body, #root { height: 100%; }
-body { @apply bg-bg text-white; background-image:
-  radial-gradient(1200px 600px at 10% -10%, rgba(249,115,22,.12), transparent 50%),
-  radial-gradient(1000px 500px at 90% -20%, rgba(245,158,11,.10), transparent 50%);
+body { @apply bg-bg text-slate-900; background-image:
+  radial-gradient(1200px 600px at 10% -10%, rgba(96,165,250,.18), transparent 50%),
+  radial-gradient(1000px 500px at 90% -20%, rgba(167,139,250,.14), transparent 50%);
 }
 
 .btn { @apply font-semibold rounded-lg px-4 py-2; }
 .btn-primary { background-image: var(--grad); color: #0b0d10; }
-.btn-ghost { @apply border border-border bg-panel text-white; }
+.btn-ghost { @apply border border-border bg-panel text-slate-900; }
 
 .container { @apply max-w-6xl mx-auto px-4; }
 

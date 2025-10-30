@@ -9,7 +9,7 @@ export default function TopNav() {
         <ul className="flex gap-6 text-sm py-3 whitespace-nowrap">
           {items.map((it, idx) => (
             <li key={it}>
-              <a href="#" className={`px-3 py-1.5 rounded-full ${idx===0 ? 'bg-amber-500/20 text-amber-300' : 'text-zinc-300 hover:text-white'}`}>{it}</a>
+              <a href="#" className={`px-3 py-1.5 rounded-full ${idx===0 ? 'bg-blue-100 text-blue-700' : 'text-slate-600 hover:text-slate-900'}`}>{it}</a>
             </li>
           ))}
         </ul>

@@ -34,7 +34,7 @@ export default function CartDrawer() {
               </div>
               <div className="text-right">
                 <div className="font-semibold">S/ {(product.price * qty).toFixed(2)}</div>
-                <button className="text-sm text-red-300 mt-1" onClick={() => remove(id)}>Eliminar</button>
+                <button className="text-sm text-red-600 mt-1" onClick={() => remove(id)}>Eliminar</button>
               </div>
             </div>
           )) : <p className="text-zinc-400">Tu carrito está vacío.</p>}

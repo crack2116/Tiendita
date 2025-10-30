@@ -43,7 +43,7 @@ export default function App() {
 
         <section className="container py-4">
           <div className="flex items-center justify-between gap-4 mb-4">
-            <div className="text-sm text-zinc-400">{filtered.length} resultados</div>
+            <div className="text-sm text-slate-500">{filtered.length} resultados</div>
             <select className="bg-panel border border-border rounded-md px-3 py-2" value={sort} onChange={e => setSort(e.target.value)}>
               <option value="featured">Destacados</option>
               <option value="price_asc">Precio: bajo a alto</option>
